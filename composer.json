@@ -19,7 +19,7 @@
 		"psr-4": { "lyquidity\\XPath2\\" : "./" }
 	},
     "suggest": {
-        "lyquidity/xpath2-test": "Download the XQTS 1.0.3 conformance suite package from https://dev.w3.org/2006/xquery-test-suite/PublicPagesStagingArea/XQTS_1_0_3.zip the uzip it and set the $xxx variable to the unzip location"
+        "lyquidity/xpath2-test": "Download the XQTS 1.0.3 conformance suite package from https://dev.w3.org/2006/xquery-test-suite/PublicPagesStagingArea/XQTS_1_0_3.zip the uzip it and 'define' variable 'CONFORMANCE_SUITE_BASE' to the unzip location"
     }
 }
 
