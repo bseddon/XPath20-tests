@@ -74,5 +74,5 @@ Assuming you have installed the library using composer then this PHP application
 <php
 require_once __DIR__ . '/vendor/autoload.php';
 define( 'CONFORMANCE_SUITE_BASE', '<your unzip location>' );
-include __DIR__ . "/tests.php";
+include __DIR__ . "/vendor/lyquidity/XPath2-tests/test.php";
 ```
