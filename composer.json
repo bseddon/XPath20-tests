@@ -1,5 +1,5 @@
 {
-	"name": "lyquidity/xpath2-test",
+	"name": "lyquidity/xpath2-tests",
 	"description": "Provides a harness to test XPath 2.0 statement execution library for PHP using the XQTS 1.0.3 conformance test suite",
 	"keywords": ["lyquidity", "xml", "XPath 2.0", "conformance"],
 	"type": "library",
