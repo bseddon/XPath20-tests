@@ -57,7 +57,7 @@ The project can be installed by [composer](https://getcomposer.org/).  First mak
 Assuming Composer is installed and a shortcut to the program is called 'composer' then the command to install this project is:
 
 ```
-composer require lyquidity/xpath2-test:dev-master --prefer-dist
+composer require lyquidity/xpath2-tests:dev-master --prefer-dist
 ```
 
 Or fork or download the repository.  It will also be necessary to download and install the [XML](https://github.com/bseddon/XPath20) project.
