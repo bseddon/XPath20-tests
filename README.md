@@ -1,4 +1,4 @@
-# XPath 2.0 processor for PHP
+# Conformance testing for the XPath 2.0 processor for PHP project
 
 **Table of contents**
 * [About the project](#about-the-project)
