@@ -12,7 +12,7 @@ use lyquidity\xml\schema\SchemaTypes;
 
 define( 'UTILITY_LIBRARY_PATH', __DIR__ . '/../utilities/' );
 define( 'XML_LIBRARY_PATH', __DIR__ . '/../xml/' );
-define( 'XPATH20_LIBRARY_PATH',  __DIR__ . '/../XPath2/' );
+define( 'XPATH20_LIBRARY_PATH',  __DIR__ . '/../xpath2/' );
 define( 'LOG_LIBRARY_PATH', __DIR__ . '/../log/' );
 if ( ! defined( 'CONFORMANCE_SUITE_BASE' ) )
 {
@@ -26,7 +26,7 @@ if ( PHP_INT_SIZE == 4 ) // x86
 	return;
 }
 
-if ( ! class_exists( "\lyquidity\XPath2\XQSTests", true ) )
+if ( ! class_exists( "\lyquidity\xpath2\XQSTests", true ) )
 {
 	require_once XPATH20_LIBRARY_PATH . 'bootstrap.php';
 	require_once __DIR__ . '/XQSTests.php';
@@ -92,7 +92,7 @@ function terminate( $terminate )
 /*   50 */ XQSTests::runTestGroups( "/MinimalConformance/Functions/ConstructFunc", function( $test, $file, $first ) { return true || $test == "K-DateTimeFunc-2" || ! $first; } ); terminate( $terminate );
 /*  545 */ XQSTests::runTestGroups( "/MinimalConformance/Functions/NumericFunc", function( $test, $file, $first ) { return true || $test == "fn-absdbl1args-1" || ! $first; } ); terminate( $terminate );
 /*   80 */ XQSTests::runTestGroups( "/MinimalConformance/Functions/AllStringFunc/AssDisassStringFunc", function( $test, $file, $first ) { return true || $test == "K-CodepointToStringFunc-8" || ! $first; } ); terminate( $terminate );
-/*   66 */ XQSTests::runTestGroups( "/MinimalConformance/Functions/AllStringFunc/CompStringFunc", function( $test, $file, $first ) { return true || $test == "fn-compare-1" || ! $first; } ); terminate( $terminate );
+/*   66 */ XQSTests::runTestGroups( "/MinimalConformance/Functions/AllStringFunc/CompStringFunc", function( $test, $file, $first ) { return true || $test == "fn-compare-2" || ! $first; } ); terminate( $terminate );
 /*  446 */ XQSTests::runTestGroups( "/MinimalConformance/Functions/AllStringFunc/GeneralStringFunc", function( $test, $file, $first ) { return true || $test == "fn-escape-html-uri1args-1" || ! $first; } ); terminate( $terminate );
 /*  181 */ XQSTests::runTestGroups( "/MinimalConformance/Functions/AllStringFunc/MatchStringFunc", function( $test, $file, $first ) { return true || $test == "fn-matches-25" || ! $first; } ); terminate( $terminate );
 /*   29 */ XQSTests::runTestGroups( "/MinimalConformance/Functions/URIFunc", function( $test, $file, $first ) { return true || $test == "fn-resolve-uri-24" || ! $first; } ); terminate( $terminate );
