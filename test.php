@@ -10,10 +10,10 @@ namespace lyquidity\XPath2;
 
 use lyquidity\xml\schema\SchemaTypes;
 
-define( 'UTILITY_LIBRARY_PATH', __DIR__ . '/../utilities/' );
-define( 'XML_LIBRARY_PATH', __DIR__ . '/../xml/' );
-define( 'XPATH20_LIBRARY_PATH',  __DIR__ . '/../xpath2/' );
-define( 'LOG_LIBRARY_PATH', __DIR__ . '/../log/' );
+if ( ! defined( 'UTILITY_LIBRARY_PATH' ) ) define( 'UTILITY_LIBRARY_PATH', __DIR__ . '/../utilities/' );
+if ( ! defined( 'XML_LIBRARY_PATH' ) ) define( 'XML_LIBRARY_PATH', __DIR__ . '/../xml/' );
+if ( ! defined( 'XPATH20_LIBRARY_PATH' ) ) define( 'XPATH20_LIBRARY_PATH',  __DIR__ . '/../xpath2/' );
+if ( ! defined( 'LOG_LIBRARY_PATH' ) ) define( 'LOG_LIBRARY_PATH', __DIR__ . '/../log/' );
 if ( ! defined( 'CONFORMANCE_SUITE_BASE' ) )
 {
 	define( 'CONFORMANCE_SUITE_BASE', "D:/GitHub/xbrlquery/conformance/XQTS_1_0_3" );

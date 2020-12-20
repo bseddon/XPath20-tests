@@ -226,7 +226,7 @@ class XQSTests
 	 * @throws \Exception
 	 * @return void|boolean
 	 */
-	public static function generateTestCOllectionsFromCatalog()
+	public static function generateTestCollectionsFromCatalog()
 	{
 		try
 		{
@@ -395,7 +395,7 @@ class XQSTests
 
 		$testGroups = json_decode( $json, true );
 
-		XQSTests::generateTestCOllectionsFromCatalog();
+		XQSTests::generateTestCollectionsFromCatalog();
 
 		foreach ( $testGroups['xpath2'] as $name => $testGroup )
 		{
@@ -589,7 +589,7 @@ class XQSTests
 								if ( ! isset( $sources[ $inputSource ] ) )
 								{
 									XQSTests::$log->info( "The input file source '$inputSource' does not exist" );
-									continue;
+									break;
 								}
 
 								$expandedUri = isset( $sources[ $inputSource ] ) ? $sources[ $inputSource ] : $inputSource;
