@@ -35,7 +35,6 @@ use lyquidity\xml\xpath\XPathItem;
 use lyquidity\xml\xpath\XPathNavigator;
 use lyquidity\XPath2\DOM\DOMXPathNavigator;
 use lyquidity;
-use lyquidity\Log;
 use lyquidity\XPath2\Value\DecimalValue;
 use lyquidity\XPath2\Iterator\ExprIterator;
 use lyquidity\xml\interfaces\IXmlSchemaType;
@@ -44,6 +43,7 @@ use lyquidity\XPath2\Iterator\ChildNodeIterator;
 use lyquidity\xml\MS\XmlQualifiedNameTest;
 use lyquidity\xml\schema\SchemaTypes;
 use lyquidity\xml\exceptions\InvalidOperationException;
+use lyquidity\XPath2\DOM\DOMXPathItem;
 
 /**
  * Class containing static functions for running tests and for building JSON file of test groups
@@ -425,7 +425,7 @@ class XQSTests
 	/**
 	 * Runs the tests in a test group
 	 * @param string $name
-	 * @param bool $testGroupFiles a set of files used by the test group
+	 * @param array $testGroupFiles a set of files used by the test group
 	 * @param bool $testCaseNameOnly
 	 */
 	private static function runTestGroup( $name, $testGroupFiles, $testCaseNameOnly = null )
@@ -697,8 +697,9 @@ class XQSTests
 	 * @param \SimpleXMLElement $node
 	 * @return string
 	 */
-	private static function createPath( /** @var \DOMElement $node */ $node )
+	private static function createPath( $node )
 	{
+		/** @var \DOMElement $node */
 		$path = "";
 
 		if ( ! $node->parentNode instanceof \DOMDocument )
@@ -1211,7 +1212,7 @@ class XQSTests
 
 	/**
 	 * Compare the result of a specific test with the expected result
-	 * @param DOMElement $id
+	 * @param \DOMElement $id
 	 * @param string $outputXml
 	 * @param object $value
 	 * @param bool $xmlCompare
@@ -1311,7 +1312,7 @@ class XQSTests
 		else if ( $value instanceof XPathItem )
 		{
 			/**
-			 * @var XPathItem $item
+			 * @var DOMXPathItem $item
 			 */
 			$item = $value;
 			if ( $item->getIsNode() )
