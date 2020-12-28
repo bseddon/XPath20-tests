@@ -45,6 +45,10 @@ use lyquidity\xml\MS\XmlQualifiedNameTest;
 use lyquidity\xml\schema\SchemaTypes;
 use lyquidity\xml\exceptions\InvalidOperationException;
 
+require_once('..\\xml\\bootstrap.php');
+require_once('..\\log\\Log.php');
+require_once('..\\XPath2\\Log.php');
+
 /**
  * Class containing static functions for running tests and for building JSON file of test groups
  *
