@@ -233,6 +233,7 @@ class XQSTests
 			$xml = file_get_contents( XQSTests::$conformanceBase . "/XQTSCatalog.xml" );
 			if ( ! $xml ) throw new \Exception( "Unable to open the XQS Catalog file" );
 
+			/** @var \SimpleXMLElement */
 			$catalog = simplexml_load_string( $xml, "SimpleXMLElement", /* LIBXML_NOENT */ 0 );
 			$name = $catalog->getName();
 			$qname = \lyquidity\xml\qname( $catalog->getName(), $catalog->getDocNamespaces() );
